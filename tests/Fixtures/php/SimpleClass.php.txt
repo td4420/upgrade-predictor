@@ -1,0 +1,25 @@
+<?php
+namespace Magento\Catalog\Model;
+
+class Product extends AbstractModel implements \Magento\Catalog\Api\Data\ProductInterface
+{
+    public function getName(): ?string
+    {
+        return $this->getData('name');
+    }
+
+    public function setPrice(float $price): self
+    {
+        return $this->setData('price', $price);
+    }
+
+    protected function beforeSave(): void
+    {
+        parent::beforeSave();
+    }
+
+    private function internalHelper(): void
+    {
+        // private — should NOT appear in class map
+    }
+}

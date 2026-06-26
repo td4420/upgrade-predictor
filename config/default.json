@@ -1,0 +1,8 @@
+{
+    "scan_paths": ["app/code"],
+    "extra_vendors": [],
+    "snapshot_dir": ".upgrade-predictor/snapshots",
+    "output": "markdown",
+    "fail_on": "critical",
+    "ignore": []
+}
