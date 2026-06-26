@@ -1,0 +1,14 @@
+<?php
+namespace Magento\Catalog\Model;
+
+class Category
+{
+    public function getChildren(bool $recursive = false, int $limit = 0): array
+    {
+        return [];
+    }
+
+    public function move(int $parentId, ?int $afterId = null): void
+    {
+    }
+}

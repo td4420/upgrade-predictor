@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Magento\Catalog\Api\Data\ProductInterface"
+                type="Bss\Custom\Model\Product"/>
+    <preference for="Magento\Sales\Api\OrderRepositoryInterface"
+                type="Bss\Custom\Model\OrderRepository"/>
+    <type name="Magento\Catalog\Model\Product">
+        <plugin name="bss_product_plugin"
+                type="Bss\Custom\Plugin\ProductPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Checkout\Model\Cart">
+        <plugin name="bss_cart_plugin"
+                type="Bss\Custom\Plugin\CartPlugin"/>
+    </type>
+</config>

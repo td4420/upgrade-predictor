@@ -1,0 +1,69 @@
+{
+    "name": "bss/upgrade-impact-predictor",
+    "description": "Detects breaking changes in custom Magento 2 code when upgrading core version",
+    "type": "library",
+    "license": "MIT",
+    "repositories": [
+        {"packagist.org": false},
+        {"type": "path", "url": "../vendor/nikic/php-parser", "options": {"symlink": false, "versions": {"nikic/php-parser": "v5.7.0"}}},
+        {"type": "path", "url": "../vendor/psr/container", "options": {"symlink": false, "versions": {"psr/container": "1.1.2"}}},
+        {"type": "path", "url": "../vendor/symfony/console", "options": {"symlink": false, "versions": {"symfony/console": "v7.4.11"}}},
+        {"type": "path", "url": "../vendor/symfony/deprecation-contracts", "options": {"symlink": false, "versions": {"symfony/deprecation-contracts": "v3.7.0"}}},
+        {"type": "path", "url": "../vendor/symfony/polyfill-ctype", "options": {"symlink": false, "versions": {"symfony/polyfill-ctype": "v1.37.0"}}},
+        {"type": "path", "url": "../vendor/symfony/polyfill-intl-grapheme", "options": {"symlink": false, "versions": {"symfony/polyfill-intl-grapheme": "v1.37.0"}}},
+        {"type": "path", "url": "../vendor/symfony/polyfill-intl-normalizer", "options": {"symlink": false, "versions": {"symfony/polyfill-intl-normalizer": "v1.37.0"}}},
+        {"type": "path", "url": "../vendor/symfony/polyfill-mbstring", "options": {"symlink": false, "versions": {"symfony/polyfill-mbstring": "v1.37.0"}}},
+        {"type": "path", "url": "../vendor/symfony/process", "options": {"symlink": false, "versions": {"symfony/process": "v7.4.11"}}},
+        {"type": "path", "url": "../vendor/symfony/service-contracts", "options": {"symlink": false, "versions": {"symfony/service-contracts": "v3.7.0"}}},
+        {"type": "path", "url": "../vendor/symfony/string", "options": {"symlink": false, "versions": {"symfony/string": "v7.4.11"}}},
+        {"type": "path", "url": "../vendor/myclabs/deep-copy", "options": {"symlink": false, "versions": {"myclabs/deep-copy": "1.13.4"}}},
+        {"type": "path", "url": "../vendor/phpunit/phpunit", "options": {"symlink": false, "versions": {"phpunit/phpunit": "12.5.25"}}},
+        {"type": "path", "url": "../vendor/phpunit/php-code-coverage", "options": {"symlink": false, "versions": {"phpunit/php-code-coverage": "12.5.6"}}},
+        {"type": "path", "url": "../vendor/phpunit/php-file-iterator", "options": {"symlink": false, "versions": {"phpunit/php-file-iterator": "6.0.1"}}},
+        {"type": "path", "url": "../vendor/phpunit/php-invoker", "options": {"symlink": false, "versions": {"phpunit/php-invoker": "6.0.0"}}},
+        {"type": "path", "url": "../vendor/phpunit/php-text-template", "options": {"symlink": false, "versions": {"phpunit/php-text-template": "5.0.0"}}},
+        {"type": "path", "url": "../vendor/phpunit/php-timer", "options": {"symlink": false, "versions": {"phpunit/php-timer": "8.0.0"}}},
+        {"type": "path", "url": "../vendor/phar-io/manifest", "options": {"symlink": false, "versions": {"phar-io/manifest": "2.0.4"}}},
+        {"type": "path", "url": "../vendor/phar-io/version", "options": {"symlink": false, "versions": {"phar-io/version": "3.2.1"}}},
+        {"type": "path", "url": "../vendor/sebastian/cli-parser", "options": {"symlink": false, "versions": {"sebastian/cli-parser": "4.2.1"}}},
+        {"type": "path", "url": "../vendor/sebastian/comparator", "options": {"symlink": false, "versions": {"sebastian/comparator": "7.1.6"}}},
+        {"type": "path", "url": "../vendor/sebastian/complexity", "options": {"symlink": false, "versions": {"sebastian/complexity": "5.0.0"}}},
+        {"type": "path", "url": "../vendor/sebastian/diff", "options": {"symlink": false, "versions": {"sebastian/diff": "7.0.0"}}},
+        {"type": "path", "url": "../vendor/sebastian/environment", "options": {"symlink": false, "versions": {"sebastian/environment": "8.1.0"}}},
+        {"type": "path", "url": "../vendor/sebastian/exporter", "options": {"symlink": false, "versions": {"sebastian/exporter": "7.0.3"}}},
+        {"type": "path", "url": "../vendor/sebastian/global-state", "options": {"symlink": false, "versions": {"sebastian/global-state": "8.0.2"}}},
+        {"type": "path", "url": "../vendor/sebastian/lines-of-code", "options": {"symlink": false, "versions": {"sebastian/lines-of-code": "4.0.1"}}},
+        {"type": "path", "url": "../vendor/sebastian/object-enumerator", "options": {"symlink": false, "versions": {"sebastian/object-enumerator": "7.0.0"}}},
+        {"type": "path", "url": "../vendor/sebastian/object-reflector", "options": {"symlink": false, "versions": {"sebastian/object-reflector": "5.0.0"}}},
+        {"type": "path", "url": "../vendor/sebastian/recursion-context", "options": {"symlink": false, "versions": {"sebastian/recursion-context": "7.0.1"}}},
+        {"type": "path", "url": "../vendor/sebastian/type", "options": {"symlink": false, "versions": {"sebastian/type": "6.0.4"}}},
+        {"type": "path", "url": "../vendor/sebastian/version", "options": {"symlink": false, "versions": {"sebastian/version": "6.0.0"}}},
+        {"type": "path", "url": "../vendor/staabm/side-effects-detector", "options": {"symlink": false, "versions": {"staabm/side-effects-detector": "1.0.5"}}},
+        {"type": "path", "url": "../vendor/theseer/tokenizer", "options": {"symlink": false, "versions": {"theseer/tokenizer": "2.0.1"}}}
+    ],
+    "require": {
+        "php": "^8.1",
+        "nikic/php-parser": "^4.10|^5.0",
+        "symfony/console": "^6.0|^7.0",
+        "symfony/process": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0|^11.0|^12.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bss\\UpgradePredictor\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Bss\\UpgradePredictor\\Tests\\": "tests/"
+        }
+    },
+    "bin": [
+        "bin/upgrade-predictor"
+    ],
+    "config": {
+        "sort-packages": true
+    }
+}
